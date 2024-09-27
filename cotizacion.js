@@ -6,7 +6,7 @@ async function cotizacion(moneda, base) {
   try {
     const response = await axios.get(url);
     const valor = response.data.data.rates[base];
-    console.log(`${moneda}: ${valor}`);
+    console.log(`${moneda}: ${valor} ${base}`);
   } catch (error) {
     console.error(
       `Error al obtener la cotización para ${moneda} a ${base}:`,
@@ -14,18 +14,6 @@ async function cotizacion(moneda, base) {
     );
   }
 }
-
-function startCotizaciones() {
-  cotizacion("BTC", "EUR");
-  cotizacion("BTC", "USD");
-  cotizacion("ETH", "EUR");
-  cotizacion("ETH", "USD");
-  cotizacion("USD", "EUR");
-  cotizacion("EUR", "USD");
-}
-
-// Ejecutar cada 5 segundos
-setInterval(startCotizaciones, 5000);
 
 //Crear una primera clase "ParMonedas"
 
@@ -36,10 +24,13 @@ class ParMonedas {
   }
 }
 
+paresDeMonedas = [new ParMonedas("EUR", "USD")];
 
-const primerPar = new ParMonedas("EUR", "USD");
+function startCotizaciones() {
+  paresDeMonedas.forEach((par) => {
+    cotizacion(par.target, par.referencia);
+  });
+}
 
-primerPar.target;
-primerPar.referencia;
-
-console.log (primerPar)
+// Ejecutar cada 5 segundos
+setInterval(startCotizaciones, 5000);
