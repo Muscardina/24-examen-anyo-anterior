@@ -1,3 +1,11 @@
+Para el ejercicio:
+-Como es posible que nos ponga el ejercicio y ya esta, recordad que hay que hacer lo siquiente:
+    -Npm init para crear un archivo package.json
+    -Npm install *libería* que en este caso es axios
+    -Incluir en package.json un start con el archivo js, pero lo podeis arrancar tambien directamente con node.
+
+
+
 # Resumen UF1289 - UF1289: Diseño de elementos software con tecnologías basadas en componentes
 
 POO
@@ -313,25 +321,6 @@ Clase Orquestador hereda de ParMonedas:
 
 Procedimiento principal:
     Crear un objeto
-```
-
-### Código a refactorizar
-
-```python
-    import requests
-    import time
-
-
-    def cotizacion_en_euros(moneda):
-        url = "https://api.coinbase.com/v2/exchange-rates?currency=%s" % moneda
-        r = requests.get()
-        valor = r.json()["data"]["rates"]["EUR"]
-        print "{%s}: {%s}" % (moneda, valor)
-
-    while(True):
-        cotizacion_en_euros('BTC')
-        cotizacion_en_euros('ETH')
-        time.sleep(5)
 ```
 
   El código de ejemplo original puede encontrarse en <https://github.com/elMestreAcademy/exchange>.

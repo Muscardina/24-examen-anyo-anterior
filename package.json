@@ -1,0 +1,15 @@
+{
+  "name": "24-examen-anyo-anterior",
+  "version": "1.0.0",
+  "description": "POO",
+  "main": "cotizacion.js",
+  "scripts": {
+    "start": "node.cotizacion.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.7"
+  }
+}
