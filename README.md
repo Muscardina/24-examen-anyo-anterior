@@ -1,8 +1,10 @@
-Para el ejercicio:
+## Para el ejercicio:
 -Como es posible que nos ponga el ejercicio y ya esta, recordad que hay que hacer lo siquiente:
-    -Npm init para crear un archivo package.json
-    -Npm install *libería* que en este caso es axios
-    -Incluir en package.json un start con el archivo js, pero lo podeis arrancar tambien directamente con node.
+
+      - 1) Npm init para crear un archivo package.json
+      - 2)  Npm install *libería* que en este caso es axios
+      - 3) Incluir en package.json un start con el archivo js, pero lo podeis arrancar tambien directamente con node.
+      - 4) ACORDAOS DE INCLUIR UN .GITIGNORE CON LOS MODULOS DE NODE.
 
 
 
